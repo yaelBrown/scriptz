@@ -1,1 +1,1 @@
-sudo apt-get install git nodejs npm
+sudo apt-get install git nodejs npm python-pip python3-pip mysql-server
