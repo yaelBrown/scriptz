@@ -7,4 +7,7 @@ read -ra ADDR <<< $pids
 pid=$ADDR
 echo "ProgressBar: PID of api is $pid"
 echo "ProgressBar: Tracing output from api"
-strace -p $pid -e write
+if [[ $(strace -p $pid -e write -t) == *'2'* ]];
+then
+    echo "I found a 2!!!!"
+fi
